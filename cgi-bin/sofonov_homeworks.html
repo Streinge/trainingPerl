@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Homeworks</title>
+</head>
+<body>
+	<div><center>
+    <h1>Homeworks</h1>
+       <table border = "1">
+         <tr><th>#HW</th><th>User_name</th><th>group_id</th><th>Point</th><th>On time<th></tr>
+          <TMPL_LOOP NAME="ROWS">
+            <tr>
+              <td><div><center><TMPL_VAR NAME=HOMEWORK></center></div></td>
+              <td><div><center><TMPL_VAR NAME=USER_NAME></center></div></td>
+              <td><div><center><TMPL_VAR NAME=GROU_ID></center></div></td>
+              <td><div><center><TMPL_VAR NAME=POINT></center></div></td>
+              <td><div><center><TMPL_VAR NAME=ON_TIME></center></div></td>
+            </tr>
+          </TMPL_LOOP> 
+       </table>
+    </center></div>
+</body>
+</html>

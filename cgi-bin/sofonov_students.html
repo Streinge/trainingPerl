@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>List of students</title>
+</head>
+<body>
+	<div><center>
+    <h1>List of students</h1>
+       <table border = "1">
+          <TMPL_LOOP NAME=ROWS>
+            <tr>
+              <td><div><center><TMPL_VAR NAME=ID></center></div></td>
+              <td><div><center><TMPL_VAR NAME=USER_NAME></center></div></td>
+            </tr>
+          </TMPL_LOOP> 
+       </table>
+    </center></div>
+</body>
+</html>

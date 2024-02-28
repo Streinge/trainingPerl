@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>List of groups</title>
+</head>
+<body>
+	<div><center>
+    <h1>List of groups</h1>
+       <table>
+          <!-- TMPL_LOOP NAME=ROWS -->
+            <tr>
+              <td><!-- TMPL_VAR NAME=ID --></td>
+              <td><!-- TMPL_VAR NAME=GROUP_NAME --></td>
+              <td><!-- TMPL_VAR NAME=STUDENTS --></td>
+              <td><!-- TMPL_VAR NAME=HOMEWORKS --></td>
+              <td><!-- TMPL_VAR NAME=RESULTS --></td>
+              <td><!-- TMPL_VAR NAME=DELETE --></td>
+            </tr>
+          <!-- /TMPL_LOOP --> 
+       </table>
+       <h2>Add new group</h2>
+       <form method="GET" action="/cgi-bin/sofonov_group.pl">
+       <b>Insert name of group </b>
+       <input name="group_name" title="This field should not be empty, don't use Russian letters" value="" size=20 required pattern="^[a-zA-Z\s]+$">
+       <b>Insert chat id </b>
+       <input name="id_chat" title="Enter a number of 10 digits" minlength="10" maxlength="10" value="" size=20 required pattern="\-[0-9]{9}\">
+       <input type="submit" value="Add+">
+       </form>
+    </center></div>
+</body>
+</html>
